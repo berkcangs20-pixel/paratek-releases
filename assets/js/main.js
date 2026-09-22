@@ -84,7 +84,7 @@
 
   /* ---------- GitHub Releases'ten güncel sürüm bilgisi ---------- */
   (function loadRelease() {
-    var REPO = 'berkcangs20-pixel/paratek';
+    var REPO = 'berkcangs20-pixel/paratek-releases';
     var versionEl = document.getElementById('dlVersion');
     var btnEl = document.getElementById('dlBtn');
     var sizeEl = document.getElementById('dlSize');
