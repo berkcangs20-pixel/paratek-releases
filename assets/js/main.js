@@ -198,4 +198,15 @@
       setTimeout(function () { playExplosion(); }, 700);
     }
   }
+
+  /* ---------- Emsoft imza logosu ---------- */
+  var sign = document.getElementById('emsoftSign');
+  if (sign) {
+    if ('IntersectionObserver' in window && !reduceMotion) {
+      var so = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { sign.classList.add('in'); so.disconnect(); } });
+      }, { threshold: 0.35 });
+      so.observe(sign);
+    } else { sign.classList.add('in'); }
+  }
 })();

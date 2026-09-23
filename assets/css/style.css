@@ -268,3 +268,22 @@ footer{ padding: 54px 0 40px; border-top:1px solid var(--line-soft); position:re
   .hero{ padding-top: 128px; }
   .download{ padding: 44px 22px; }
 }
+
+/* ---------- Emsoft imza logosu (footer) ---------- */
+.emsoft-sign{ position:relative; width:min(460px,86vw); margin:0 auto 46px; padding-top:6px; }
+.emsoft-sign img{ width:100%; display:block; }
+.emsoft-glow{ position:absolute; inset:-30% -10%; background:radial-gradient(ellipse at center, rgba(217,180,99,.16), transparent 65%); opacity:0; transition:opacity 1.6s ease; pointer-events:none; }
+.emsoft-em{ clip-path: inset(0 100% 0 0); }
+.emsoft-text{ opacity:0; transform: translateY(-60px) scale(.35); filter: blur(8px); transform-origin: 50% 0; margin-top:-2px; }
+.emsoft-sign.in .emsoft-glow{ opacity:1; }
+.emsoft-sign.in .emsoft-em{ animation: emWrite 2.1s cubic-bezier(.45,.05,.25,1) forwards; }
+.emsoft-sign.in .emsoft-text{ animation: emBurst 1s cubic-bezier(.2,.9,.3,1.15) 1.85s forwards; }
+@keyframes emWrite{ to{ clip-path: inset(0 0 0 0); } }
+@keyframes emBurst{ 0%{ opacity:0; transform: translateY(-70px) scale(.3); filter: blur(8px);} 60%{ opacity:1; filter: blur(0);} 100%{ opacity:1; transform:none; filter:blur(0);} }
+.emsoft-shine{ position:absolute; inset:0; pointer-events:none; overflow:hidden;
+  -webkit-mask-image:linear-gradient(#000,#000); }
+.emsoft-shine::after{ content:''; position:absolute; top:0; bottom:0; left:-40%; width:30%;
+  background: linear-gradient(100deg, transparent, rgba(255,244,214,.55), transparent); transform: skewX(-18deg); opacity:0; mix-blend-mode: overlay; }
+.emsoft-sign.in .emsoft-shine::after{ animation: emShine 2.4s ease-in-out 3s infinite; }
+@keyframes emShine{ 0%{ left:-40%; opacity:0;} 15%{opacity:1;} 60%{ left:120%; opacity:1;} 100%{ left:120%; opacity:0;} }
+@media (prefers-reduced-motion: reduce){ .emsoft-em{ clip-path:none; } .emsoft-text{ opacity:1; transform:none; filter:none; } .emsoft-glow{ opacity:1; } }
