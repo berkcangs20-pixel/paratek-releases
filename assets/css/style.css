@@ -287,3 +287,8 @@ footer{ padding: 54px 0 40px; border-top:1px solid var(--line-soft); position:re
 .emsoft-sign.in .emsoft-shine::after{ animation: emShine 2.4s ease-in-out 3s infinite; }
 @keyframes emShine{ 0%{ left:-40%; opacity:0;} 15%{opacity:1;} 60%{ left:120%; opacity:1;} 100%{ left:120%; opacity:0;} }
 @media (prefers-reduced-motion: reduce){ .emsoft-em{ clip-path:none; } .emsoft-text{ opacity:1; transform:none; filter:none; } .emsoft-glow{ opacity:1; } }
+
+/* ---------- Tanıtım videosu ---------- */
+.video-frame{ max-width:980px; margin:0 auto; border-radius: var(--radius-lg); overflow:hidden; border:1px solid var(--line);
+  box-shadow: 0 60px 120px -36px rgba(0,0,0,.65), 0 0 0 1px rgba(217,180,99,.08); background:#000; }
+.video-frame video{ display:block; width:100%; height:auto; }
