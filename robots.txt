@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://berkcangs20-pixel.github.io/paratek-releases/sitemap.xml
